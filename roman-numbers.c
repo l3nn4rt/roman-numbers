@@ -18,6 +18,7 @@ int roman_digit_value(char c) {
 		case 'd': case 'D': return 500;
 		case 'm': case 'M': return 1000;
 	}
+
 	return ERR_NOT_A_ROMAN_DIGIT;
 }
 
@@ -76,6 +77,7 @@ int main(int argc, char **argv) {
 
 	while (fgets(buff, sizeof buff, stdin)) {
 		len = strlen(buff);
+
 		if (buff[len - 1] == '\n') {
 			buff[len - 1] = '\0';
 			len--;
