@@ -72,12 +72,16 @@ int roman_number_value(char *s) {
 
 int main(int argc, char **argv) {
 	char buff[BUFSIZ];
-	int num;
+	int num, len;
 
 	while (fgets(buff, sizeof buff, stdin)) {
-		buff[strlen(buff) - 1] = '\0';
+		len = strlen(buff);
+		if (buff[len - 1] == '\n') {
+			buff[len - 1] = '\0';
+			len--;
+		}
 
-		if (strlen(buff) > 0) {
+		if (len > 0) {
 			num = roman_number_value(buff);
 
 			if (num == ERR_NOT_A_ROMAN_NUMBER)
