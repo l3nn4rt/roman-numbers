@@ -7,7 +7,7 @@ $ gcc -o r2i roman-numbers.c
 
 # interactive
 $ ./r2i
-lxviv   
+lxviv
 69
 mmdxxlvii
 2537
@@ -24,6 +24,6 @@ $ ./r2i <afile
 3537
 
 # no trailing newline
-$ echo -n xii | ./r2i 
+$ echo -n xii | ./r2i
 12
 ```
